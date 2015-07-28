@@ -40,7 +40,7 @@ task ndkBuild(type: Exec) {
         throw new GradleException("NDK is not configured. Make sure there is a local.properties " +
                 "file with an ndk.dir entry in the directory ${gradle_project_root}.")
     }
-    def ndkBuildExecutable = new File(ndkDir, 'ndk-build.cmd')
+    def ndkBuildExecutable = new File(ndkDir, 'ndk-build')
     if (!ndkBuildExecutable.exists()) {
         throw new GradleException("Could not find ndk-build. The configured NDK directory ${ndkDir} may not be correct.")
     }
